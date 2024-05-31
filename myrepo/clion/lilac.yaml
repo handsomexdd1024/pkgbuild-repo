@@ -3,5 +3,5 @@ maintainers:
     email: Billy Yang <me@venti.love>
 
 update_on:
-  - source: manual
-    manual: 1
+  - source: aur
+    aur: clion
