@@ -4,7 +4,7 @@ maintainers:
 
 update_on:
   - source: aur
-    aur: python-mcdreforged
+    aur: google-chrome
 
 build_prefix: extra-x86_64
 
