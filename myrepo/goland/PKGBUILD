@@ -3,7 +3,7 @@
 pkgbase=goland
 pkgname=(goland goland-jre)
 pkgver=2024.1.4
-pkgrel=23
+pkgrel=24
 arch=('x86_64' 'i686')
 url='https://www.jetbrains.com/go/'
 license=('custom:jetbrains')
