@@ -5,7 +5,7 @@
 pkgbase=webstorm
 pkgname=(webstorm webstorm-jre)
 pkgver=2024.1.5
-pkgrel=59
+pkgrel=60
 pkgdesc='JavaScript IDE and HTML editor'
 arch=('x86_64' 'i686')
 url='https://www.jetbrains.com/webstorm/'
