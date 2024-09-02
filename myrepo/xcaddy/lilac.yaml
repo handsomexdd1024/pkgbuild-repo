@@ -4,15 +4,10 @@ maintainers:
 
 update_on:
   - source: aur
-    aur: caddy-cloudflare
-
-update_on_build:
-  - pkgbase: xcaddy
-
-repo_depends: ["xcaddy"]
+    aur: xcaddy
 
 build_prefix: extra-x86_64
 
-pre_build_script: aur_pre_build(maintainers=['nickray'])
+pre_build_script: aur_pre_build(maintainers=['opensorcerer'])
 
 post_build: aur_post_build
