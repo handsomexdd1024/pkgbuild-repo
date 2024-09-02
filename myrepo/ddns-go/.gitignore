@@ -1,0 +1,5 @@
+/ddns-go
+/src
+/pkg
+*.pkg.tar.*
+*.tar.gz
