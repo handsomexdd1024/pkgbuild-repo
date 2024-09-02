@@ -2,7 +2,7 @@
 _name=mcdreforged
 pkgname=python-${_name}
 pkgver=2.13.1
-pkgrel=2
+pkgrel=1
 pkgdesc="A rewritten version of MCDaemon, a python script to control your Minecraft server"
 arch=(any)
 url="https://github.com/Fallen-Breath/MCDReforged"
