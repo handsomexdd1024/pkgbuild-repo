@@ -1,0 +1,7 @@
+**/*
+!.SRCINFO
+!.gitignore
+!PKGBUILD
+!mosdns-sysusers.conf
+!mosdns.service
+!lilac.yaml
