@@ -9,7 +9,7 @@ update_on:
 update_on_build:
   - pkgbase: xcaddy
 
-repo_depends: ["xcaddy"]
+repo_makedepends: ["xcaddy"]
 
 build_prefix: extra-x86_64
 
