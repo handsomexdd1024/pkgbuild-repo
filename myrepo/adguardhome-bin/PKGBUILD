@@ -1,54 +1,30 @@
-# Maintainer: Giovanni Harting <539@idlegandalf.com>
-# Contributor: Pavers_Career <pavers_career_0d AT ícloud DOT com>
+# Maintainer: Marc Vidal <mvidaldp@gmail.com>
 
-pkgname=adguardhome
-_name=AdGuardHome
+pkgname=adguardhome-bin
+_pkgname=AdGuardHome
 pkgver=0.107.52
-pkgrel=2
-epoch=1
-pkgdesc='Network-wide ads and trackers blocking DNS server'
-arch=(x86_64 aarch64 armv7h)
+_pkgver="v${pkgver}"
+pkgrel=1
+pkgdesc='Network-wide ads and trackers blocking DNS server (binary version).'
+arch=('i686' 'x86_64' 'armv7h' 'aarch64')
 url='https://github.com/AdguardTeam/AdGuardHome'
-license=(GPL-2.0-only)
-source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz"
-        "$pkgname.service"
-        "$pkgname.install")
-makedepends=(go nodejs npm git)
-depends=(glibc)
-install="$pkgname.install"
-b2sums=('0391ad041e3a4cf9ebcf8ad081c417454311431847cef8020af7ac7569cc2721ab6af269067f6d3f81e0078ed49cb1ef7a15a699c41e88de26a085cd2eb7de8b'
-        '161152f91e09fe491db631eb6ed603c0c975453b682467945fdade6091bf427ec932230f3a10e40e2f054dc01567930ecc27343c04882fb0e736b4f6becc96da'
-        'b22ae447e0288e64332bcb41cc73f61e9adb58d402ef3ccfb896aa1ecbec4d4ff66bfc1464ca9d0bc99f1a5b4d32bdc5765f42a1b72b0fb3786ecefcf94a7265')
+license=('GPL')
+provides=("${pkgname}")
+conflicts=('adguardhome')
+install=adguardhome-bin.install
+_releaseurl="${url}/releases/download/${_pkgver}"
 
-prepare() {
-  cd "$_name-$pkgver"
-  npm --prefix client ci
-  go mod download
-}
+source_i686=("${_pkgname}-${pkgver}.tar.gz::${_releaseurl}/${_pkgname}_linux_386.tar.gz")
+source_x86_64=("${_pkgname}-${pkgver}.tar.gz::${_releaseurl}/${_pkgname}_linux_amd64.tar.gz")
+source_armv7h=("${_pkgname}-${pkgver}.tar.gz::${_releaseurl}/${_pkgname}_linux_armv7.tar.gz")
+source_aarch64=("${_pkgname}-${pkgver}.tar.gz::${_releaseurl}/${_pkgname}_linux_arm64.tar.gz")
 
-build() {
-  cd "$_name-$pkgver"
-  export NODE_OPTIONS=--openssl-legacy-provider
-  npm --prefix client run build-prod
-  unset NODE_OPTIONS
-
-  export CGO_CPPFLAGS="${CPPFLAGS}"
-  export CGO_CFLAGS="${CFLAGS}"
-  export CGO_CXXFLAGS="${CXXFLAGS}"
-  go build \
-    -trimpath \
-    -buildmode=pie \
-    -mod=readonly \
-    -modcacherw \
-    -ldflags "-linkmode external -extldflags \"${LDFLAGS}\" -X 'github.com/AdguardTeam/AdGuardHome/internal/version.version=v$pkgver' -X 'github.com/AdguardTeam/AdGuardHome/internal/version.channel=release'" \
-    -o $pkgname
-}
+sha256sums_i686=('dba890add7a7588fbcf0dea2cb6cce5d0ffe713b908c256d8e38735e6528b699')
+sha256sums_x86_64=('a2645ecf23ccadbb0d97b324aef9bc67d126b8e394428ae5a23c2f1b73c5d140')
+sha256sums_aarch64=('86ae7a7c2db9c158b9db9f350568485e3ccc43e7039624d1a5bc50bb1dee1048')
+sha256sums_armv7h=('7cb6b91ffc07a3fb068ea938e098c5511bcfc11382fa1ee7bc0e37fda78388bb')
 
 package() {
-  install -Dm755 "$_name-$pkgver/$pkgname" "$pkgdir/usr/bin/$pkgname"
-  install -Dm644 "$pkgname.service" "$pkgdir/usr/lib/systemd/system/$pkgname.service"
-  install -dm755 "$pkgdir/etc"
-  ln -s "/var/lib/$pkgname/$_name.yaml" "$pkgdir/etc/$pkgname.yaml"
+    install -Dm755 "${_pkgname}/${_pkgname}" "${pkgdir}/var/lib/adguardhome/${_pkgname}"
+    install -Dm644 "../adguardhome.service" "${pkgdir}/usr/lib/systemd/system/adguardhome.service"
 }
-
-# vim:set ts=2 sw=2 et:
