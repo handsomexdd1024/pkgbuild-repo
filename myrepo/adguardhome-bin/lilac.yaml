@@ -4,10 +4,10 @@ maintainers:
 
 update_on:
   - source: aur
-    aur: adguardhome
+    aur: adguardhome-bin        
 
 build_prefix: extra-x86_64
 
-pre_build_script: aur_pre_build(maintainers=['anonfunc'])
+pre_build_script: aur_pre_build(maintainers=['mvidaldp'])
 
 post_build: aur_post_build
