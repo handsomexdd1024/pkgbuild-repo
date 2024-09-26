@@ -4,7 +4,7 @@
 # Contributor: sh!zeeg (shizeeque@gmail.com) support for non-avx2 CPUs, shell completions.
 pkgname=bun-bin
 pkgver=1.1.29
-pkgrel=1
+pkgrel=2
 pkgdesc="All-in-one JavaScript runtime built for speed, with bundler, transpiler, test runner, and package manager. Includes bunx, shell completions and support for baseline CPUs"
 arch=('x86_64' 'aarch64')
 url="https://github.com/oven-sh/bun"
