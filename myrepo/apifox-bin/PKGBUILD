@@ -3,7 +3,7 @@ pkgname=apifox-bin
 _pkgname=Apifox
 pkgver=2.6.18
 _electronversion=22
-pkgrel=1
+pkgrel=2
 pkgdesc="Apifox=Postman+Swagger+Mock+JMeter.API 文档、API 调试、API Mock、API 自动化测试"
 arch=(
     'aarch64'
