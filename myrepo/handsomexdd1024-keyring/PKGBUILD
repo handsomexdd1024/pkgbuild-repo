@@ -1,0 +1,23 @@
+pkgname=handsomexdd1024-keyring
+pkgver=2024.10.9
+pkgrel=1
+pkgdesc="handsomexdd1024 PGP Keyring"
+arch=('any')
+depends=('pacman')
+makedepends=('util-linux')
+source=('master.gpg'
+        'lilac.gpg'
+        'handsomexdd1024-trusted'
+        'handsomexdd1024-revoked')
+sha256sums=('6888ae642293d4be640da3c3aba13037f75bf45d2ad11550406f1163f587160f'
+            '9762f288305cf75c380daca32a5d28303f2eef891cb776b8ffd10452938749be'
+            'd25bed3409211e7e9f318077ea2767a489ec503fa0ccc67ecfbf1a04dfdc4c95'
+            'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855')
+build() {
+    cat *.gpg > handsomexdd1024.asc
+}
+package() {
+    install -Dm644 handsomexdd1024.asc "$pkgdir/usr/share/pacman/keyrings/handsomexdd1024.gpg"
+    install -Dm644 handsomexdd1024-truste "$pkgdir/usr/share/pacman/keyrings/handsomexdd1024-trusted"
+    install -Dm644 handsomexdd1024-revoked "$pkgdir/usr/share/pacman/keyrings/handsomexdd1024-revoked"
+}
