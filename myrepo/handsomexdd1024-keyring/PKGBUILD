@@ -18,6 +18,6 @@ build() {
 }
 package() {
     install -Dm644 handsomexdd1024.asc "$pkgdir/usr/share/pacman/keyrings/handsomexdd1024.gpg"
-    install -Dm644 handsomexdd1024-truste "$pkgdir/usr/share/pacman/keyrings/handsomexdd1024-trusted"
+    install -Dm644 handsomexdd1024-trusted "$pkgdir/usr/share/pacman/keyrings/handsomexdd1024-trusted"
     install -Dm644 handsomexdd1024-revoked "$pkgdir/usr/share/pacman/keyrings/handsomexdd1024-revoked"
 }
