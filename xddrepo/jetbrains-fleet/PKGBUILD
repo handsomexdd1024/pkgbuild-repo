@@ -4,7 +4,7 @@
 
 pkgname=jetbrains-fleet
 pkgver=1.41.101
-pkgrel=1
+pkgrel=2
 pkgdesc="JetBrains IDE for any language"
 arch=('x86_64' 'aarch64')
 url="https://www.jetbrains.com/fleet/"
