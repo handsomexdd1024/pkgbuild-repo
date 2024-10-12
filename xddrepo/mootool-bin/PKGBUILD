@@ -2,7 +2,7 @@
 pkgname=mootool-bin
 _pkgname=MooTool
 pkgver=1.6.1
-pkgrel=3
+pkgrel=4
 pkgdesc="Handy tool set for developers. 开发者常备小工具"
 arch=("x86_64")
 url="https://github.com/rememberber/MooTool"
