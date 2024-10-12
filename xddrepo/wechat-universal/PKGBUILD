@@ -2,7 +2,7 @@
 
 pkgname=wechat-universal
 pkgver=1.0.0.242
-pkgrel=4
+pkgrel=5
 pkgdesc="WeChat (Universal) with namespace sandboxing"
 arch=('x86_64' 'aarch64' 'loong64')
 url="https://weixin.qq.com"
