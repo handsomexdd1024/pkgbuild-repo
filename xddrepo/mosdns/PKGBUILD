@@ -1,7 +1,7 @@
 # Maintainer: Henry-ZHR <henry-zhr@qq.com>
 pkgname=mosdns
 pkgver=5.3.3
-pkgrel=3
+pkgrel=4
 pkgdesc="A DNS forwarder"
 arch=('x86_64' 'armv7h' 'aarch64')
 url="https://github.com/IrineSistiana/mosdns"
