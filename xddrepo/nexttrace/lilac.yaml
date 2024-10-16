@@ -4,12 +4,10 @@ maintainers:
 
 update_on:
   - source: aur
-    aur: opentrace
+    aur: nexttrace
 
 build_prefix: extra-x86_64
 
-repo_depends: ["nexttrace"]
-
-pre_build_script: aur_pre_build(maintainers=['huyz'])
+pre_build_script: aur_pre_build(maintainers=['caesarw'])
 
 post_build: aur_post_build
