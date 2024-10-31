@@ -4,10 +4,9 @@ maintainers:
 
 update_on:
   - source: aur
-    aur: syncthingtray-qt6
+    aur: c++utilities
 
 build_prefix: extra-x86_64
-repo_depends: ["c++utilities", "qtutilities-qt6", "qtforkawesome-qt6"]
 
 pre_build_script: aur_pre_build(maintainers=['Martchus'])
 
