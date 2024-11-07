@@ -4,10 +4,10 @@ maintainers:
 
 update_on:
   - source: aur
-    aur: ventoy-bin
+    aur: typora
 
 build_prefix: extra-x86_64
 
-pre_build_script: aur_pre_build(maintainers=['DuckSoft', 'KokaKiwi', 'yochananmarqos', 'Kr1ss'])
+pre_build_script: aur_pre_build(maintainers=['irgendwr'])
 
 post_build: aur_post_build
