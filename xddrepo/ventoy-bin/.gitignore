@@ -1,0 +1,17 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!PKGBUILD
+!.SRCINFO
+!ventoy
+!ventoygui
+!ventoyplugson
+!ventoyweb
+!ventoy-persistent
+!ventoy-extend-persistent
+!ventoy.desktop
+!sanitize.patch
+!ventoy.install
+!lilac.yaml
