@@ -6,7 +6,7 @@ _pkgname=qqmusic
 
 pkgname="${_pkgname}"-appimage
 pkgver=1.1.7
-pkgrel=1
+pkgrel=2
 pkgdesc="A music player from Tencent"
 arch=('x86_64')
 url="https://y.qq.com"
