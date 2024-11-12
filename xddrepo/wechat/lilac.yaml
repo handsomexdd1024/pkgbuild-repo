@@ -4,10 +4,10 @@ maintainers:
 
 update_on:
   - source: aur
-    aur: wechat-universal
+    aur: wechat
 
 build_prefix: extra-x86_64
 
-pre_build_script: aur_pre_build(maintainers=['lihe07'])
+pre_build_script: aur_pre_build(maintainers=['KimiBlock', 'SiHuan'])
 
 post_build: aur_post_build

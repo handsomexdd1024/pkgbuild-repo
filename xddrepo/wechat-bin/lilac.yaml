@@ -4,10 +4,10 @@ maintainers:
 
 update_on:
   - source: aur
-    aur: 
+    aur: wechat-bin
 
 build_prefix: extra-x86_64
 
-pre_build_script: aur_pre_build(maintainers=[])
+pre_build_script: aur_pre_build(maintainers=['devome', 'lihe07'])
 
 post_build: aur_post_build
