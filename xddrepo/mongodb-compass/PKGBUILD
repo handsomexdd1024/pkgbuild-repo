@@ -2,7 +2,7 @@
 
 pkgname=mongodb-compass
 pkgver=1.44.7
-pkgrel=1
+pkgrel=2
 pkgdesc="The MongoDB GUI"
 arch=('x86_64')
 url="https://www.mongodb.com/products/compass"
