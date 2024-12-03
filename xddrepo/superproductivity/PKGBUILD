@@ -4,7 +4,7 @@
 pkgname=superproductivity
 _name=super-productivity
 pkgver=10.1.1
-pkgrel=1
+pkgrel=2
 pkgdesc="An advanced todo list app with timeboxing and time tracking capabilities"
 arch=('any')
 url="https://super-productivity.com"
