@@ -5,7 +5,7 @@
 pkgbase=intellij-idea-ultimate-edition
 pkgname=(intellij-idea-ultimate-edition intellij-idea-ultimate-edition-jre)
 pkgver=2024.3
-pkgrel=1
+pkgrel=2
 _buildver=243.21565.193
 jbr_ver=21.0.4
 jbr_build=aarch64-b631
