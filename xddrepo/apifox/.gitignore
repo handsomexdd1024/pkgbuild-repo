@@ -1,0 +1,9 @@
+*.zip
+*.part
+*.pkg.tar.gz
+*.pkg.tar.zst
+*.sh
+pkg/
+src/
+*.tar.gz
+apifox-*

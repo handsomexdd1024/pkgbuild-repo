@@ -4,10 +4,10 @@ maintainers:
 
 update_on:
   - source: aur
-    aur: apifox-bin
+    aur: apifox
 
 build_prefix: extra-x86_64
 
-pre_build_script: aur_pre_build(maintainers=['zxp19821005'])
+pre_build_script: aur_pre_build(maintainers=['hr567', 'witt.9099'])
 
 post_build: aur_post_build
